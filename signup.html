@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --input-bg: #f8fafc;
+      --border-color: #e2e8f0;
+      --border-focus: #6366f1;
+      
+      /* New Stylish Button Color */
+      --btn-bg: #4f46e5;
+      --btn-hover: #4338ca;
+      
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 32px 20px;
+    }
+
+    /* Centered Box with generous padding */
+    .card-box {
+      width: 100%;
+      max-width: 440px;
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.02);
+      border: 1px solid var(--border-color);
+    }
+
+    .header-section {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--text-muted);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 14px 18px;
+      background-color: var(--input-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    input::placeholder {
+      color: #94a3b8;
+      font-weight: 400;
+    }
+
+    input:focus {
+      background-color: #ffffff;
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .checkbox-group input {
+      accent-color: var(--btn-bg);
+      width: 17px;
+      height: 17px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .checkbox-group a {
+      color: var(--btn-bg);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .checkbox-group a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 15px;
+      background-color: var(--btn-bg);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--btn-hover);
+      box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .footer-text {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--text-muted);
+      margin-top: 28px;
+    }
+
+    .footer-text a {
+      color: var(--btn-bg);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-box">
+    <div class="header-section">
+      <h1>Create an account</h1>
+      <p class="subtitle">Get started with your free account today</p>
+    </div>
+
+    <!-- <form> -->
+      <div class="form-group">
+        <label for="userName">Full Name</label>
+        <input type="text" id="userName" placeholder="John Doe" >
+      </div>
+
+      <div class="form-group">
+        <label for="signupEmail">Email address</label>
+        <input type="email" id="signupEmail" placeholder="name@company.com" >
+      </div>
+
+      <div class="form-group">
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" placeholder="Minimum 8 characters" >
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" >
+        <label for="terms" style="margin-bottom:0; font-weight:500; text-transform:none; cursor:pointer;">I agree to the <a href="#">Terms & Privacy</a></label>
+      </div>
+
+      <button type="submit" id="signupBtn" class="btn-primary">Create Account</button>
+    <!-- </form> -->
+
+    <div class="footer-text">
+      Already have an account? <a href="index.html">Sign in</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="signup.js"></script>
+
+</body>
+</html>

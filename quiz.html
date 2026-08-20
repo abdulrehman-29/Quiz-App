@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, sans-serif;
+        }
+
+        #nextBtn:disabled {
+            background-color: #cccccc !important;
+            color: #666666 !important;
+            cursor: not-allowed !important;
+            border: 1px solid #999999 !important;
+            opacity: 0.6;
+        }
+
+        body {
+            background: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .quiz-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            padding: 32px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            color: #64748b;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .meta strong {
+            color: #4f46e5;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Radio Box Layout (Bina :has selector ke) */
+        .option-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .option-item input[type="radio"] {
+            position: absolute;
+            left: 16px;
+            z-index: 1;
+            accent-color: #4f46e5;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .option-item label {
+            width: 100%;
+            padding: 16px 16px 16px 48px;
+            /* Radio button ke liye jagah */
+            background: #f1f5f9;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #0f172a;
+            transition: 0.2s;
+        }
+
+        .option-item label:hover {
+            background: #e2e8f0;
+        }
+
+        /* Classic Sibling Selector for Active State */
+        .option-item input[type="radio"]:checked+label {
+            background: #e0e7ff;
+            border-color: #4f46e5;
+            color: #4f46e5;
+        }
+
+        .btn {
+            margin-top: 24px;
+            width: 100%;
+            padding: 16px;
+            background: #4f46e5;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #4338ca;
+        }
+
+        .result-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .result-box h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .result-text {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .result-text strong {
+            color: #2b7de9;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .logout-btn {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+        #quiz{
+            margin-top:24px ;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quiz-card">
+        <h1 class="title">HTML Test-I Quiz</h1>
+
+        <div class="meta">
+            <span>Question <strong id="quesCount">1</strong> of 25</span>
+            <span>Time Left: <strong id="questionNumber">20</strong>s</span>
+        </div>
+
+        <div id="quiz"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
