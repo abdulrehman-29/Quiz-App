@@ -1,48 +1,89 @@
-# 🚀 Interactive Quiz Web Application
+# 🎯 Interactive Web Quiz App
 
-A sleek, responsive, and feature-rich Quiz Web Application built with modern web technologies. This app includes local user authentication, a question-by-question countdown timer, and dynamic score tracking.
+A lightweight, simple, and interactive Quiz Application built using **Vanilla HTML, CSS, JavaScript**, and **LocalStorage**. Users can sign up, log in, attempt timed multiple-choice quizzes, and view their final results upon completion.
 
 ---
 
 ## ✨ Features
 
-- **🔐 User Authentication (Local Storage)**
-  - **Sign Up:** New users can register easily. Account credentials and user state are saved securely in `localStorage`.
-  - **Login:** Registered users can log in to access the quiz.
-  - **Session Management:** Persists login state so users stay logged in until they choose to sign out.
-
-- **⏱️ Timed Questions**
-  - **20-Second Countdown:** Every question features a strict 20-second countdown timer.
-  - **Auto-Advance:** If time runs out, the app automatically submits the current question and moves to the next.
-
-- **📊 Dynamic Score & Results**
-  - Real-time score calculation based on correct answers.
-  - Summary page showing performance stats upon completion.
-
-- **📱 Fully Responsive Design**
-  - Works seamlessly across desktop, tablet, and mobile devices.
+* 🔐 **User Authentication (Sign Up / Log In):** Simple login and registration system stored entirely in the browser's `LocalStorage`.
+* ⏱️ **20-Second Countdown Timer:** Every question has a strict 20-second timer. If time runs out before selecting an option, the app automatically moves to the next question.
+* 🚫 **Smart Button Validation:** The **Next Question** button remains disabled until the user selects an answer, preventing accidental skips.
+* 📊 **Instant Score & Results:** Displays complete test performance and score right after finishing the quiz.
+* 💾 **Persistent Session Data:** Uses browser `LocalStorage` so account data and scores persist across page reloads.
+* ⚡ **Zero Dependencies:** Built with pure Web Technologies—no external backend, databases, or JS frameworks required!
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5:** Semantic structure and content.
-- **CSS3:** Modern styling, flexbox/grid layouts, and responsive design.
-- **JavaScript (ES6+):** Application logic, DOM manipulation, timers, and state management.
-- **Storage:** Browser `localStorage` for client-side user accounts and session data.
+* **HTML5** – UI structure and form markup.
+* **CSS3** – Layout styling, responsive design, and status colors.
+* **JavaScript (ES6)** – Timer logic, form control, scoring algorithm, and DOM manipulation.
+* **LocalStorage API** – Client-side storage for user accounts and quiz state.
+
+---
+
+## 📂 Project Structure
+
+```text
+quiz-app/
+│
+├── index.html       # Sign Up & Log In page
+├── quiz.html        # Main Quiz interface
+├── result.html      # Score breakdown & results screen
+│
+├── css/
+│   └── style.css    # Unified stylesheet for all screens
+│
+├── js/
+│   ├── auth.js      # Sign Up & Login logic with LocalStorage
+│   ├── quiz.js      # Quiz timer, questions, and option validation
+│   └── questions.js # Quiz questions dataset
+│
+└── README.md        # Project documentation
+```
 
 ---
 
 ## 🚀 Getting Started
 
-Follow these steps to get a local copy up and running:
+Follow these instructions to run the project locally on your machine.
 
 ### Prerequisites
 
-All you need is a modern web browser (such as Chrome, Firefox, Edge, or Safari).
+No special tools or backends are required. All you need is a modern web browser (Google Chrome, Firefox, Safari, Edge, etc.).
 
-### Installation & Setup
+### Installation & Run Steps
 
-1. **Clone the repository:**
+1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/your-username/quiz-web-app.git](https://github.com/your-username/quiz-web-app.git)
+   git clone https://github.com/your-username/quiz-app.git
+   ```
+
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd quiz-app
+   ```
+
+3. **Open in Browser:**
+   * Simply double-click `index.html` to open it in your browser.
+   * **Alternative (VS Code):** Right-click `index.html` and click **"Open with Live Server"**.
+
+---
+
+## 🎮 How to Play
+
+1. **Create an Account:** Open `index.html` and sign up with a username and password.
+2. **Log In:** Use your registered details to log in.
+3. **Take the Quiz:**
+   * You will have **20 seconds** per question.
+   * Select one option to enable the **Next** button.
+   * If the time hits `0`, the app automatically jumps to the next question!
+4. **View Results:** After the final question, your total score and result summary will be displayed.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — feel free to modify and use it for your own projects!
